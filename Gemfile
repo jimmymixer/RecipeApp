@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.5'
 # Added to this project
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-
+gem 'nested_form_fields', '~> 0.8.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -9,3 +9,15 @@ bundle
 scss
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+gem 'nested_form_fields', '~> 0.8.2'
+bundle
+application.js file add
+//= require nested_form_fields
+follow cocoon gem github documentation
+
+rails g model Ingredient content:text recipe:belongs_to
+rails db:migrate
+
+rails g model Step direction:text recipe:belongs_to
+rails db:migrate
