@@ -11,15 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, id: :recipe_title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, id: :recipe_description, class: "form-control" %>
   </div>
+
+  <h3>Add Ingredients</h3>
+  <div class="form-group">
+    <%= f.nested_fields_for :ingredients do |ingredient| %>
+      <%= ingredient.text_field :content %>
+      <%= ingredient.remove_nested_fields_link %>
+      <% end %>
+    <%= f.add_nested_fields_link :ingredients %>
+  </div>
+
+  <h3>Add Steps</h3>
+  <div class="form-group">
+    <%= f.nested_fields_for :steps do |step| %>
+      <%= step.text_field :direction %>
+      <%= step.remove_nested_fields_link %>
+      <% end %>
+    <%= f.add_nested_fields_link :steps %>
+  </div>
+
 
   <div class="actions">
     <%= f.submit %>
