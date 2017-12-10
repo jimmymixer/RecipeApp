@@ -21,3 +21,23 @@ rails db:migrate
 
 rails g model Step direction:text recipe:belongs_to
 rails db:migrate
+
+gem 'carrierwave', '~> 1.0'
+bundle
+#this creates a new model Image
+rails generate uploader Image
+rails db:migrate
+# create new file in
+config/initializers/carrier_wave.rb
+in inside:
+require 'carrierwave/orm/activerecord'
+
+# this adds another column named image:
+rails g migration add_image_to_recipe image:string
+
+gem 'mini_magick', '~> 4.3'
+bundle
+config/initializers/carrier_wave.rb
+require 'carrierwave/orm/activerecord'
+views/uploaders
+include CarrierWave::MiniMagick
