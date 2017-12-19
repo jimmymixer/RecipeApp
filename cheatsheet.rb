@@ -41,3 +41,6 @@ config/initializers/carrier_wave.rb
 require 'carrierwave/orm/activerecord'
 views/uploaders
 include CarrierWave::MiniMagick
+
+add a static page
+rails g controller Pages
