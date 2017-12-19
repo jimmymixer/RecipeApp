@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-5 col-md-offset-4">
       <% if @recipe.image? %>
       <%= image_tag @recipe.image.url, class: "recipe-show" %>
       <!-- <%= image_tag(@recipe.image_url) %> -->
@@ -14,7 +14,7 @@
   <br><hr><br>
 
   <div class="row">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-5 col-md-offset-4">
       <p>
         <strong>Title:</strong>
         <%= @recipe.title %>
