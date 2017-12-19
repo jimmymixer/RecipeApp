@@ -16,7 +16,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
+* {
+  font-family: 'Roboto', sans-serif;
+}
 img.recipe-show{
   width: 300px;
   height: auto;
